@@ -1,0 +1,37 @@
+body {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: brown;
+}
+
+button {
+    /* background-color: rgb(26, 184, 42); */
+    background-color: rgb(7, 110, 194);
+    border: 100px;
+    display: grid;
+    margin: auto;
+    margin-top: 350px;
+    padding: 15px;
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: bolder;
+}
+#boton {
+    background-color: rgb(7, 110, 194);
+        border: 100px;
+       /*  display: grid;
+        margin: auto; */
+        margin-top: 20px;
+        padding: 15px;
+        color: aliceblue;
+        font-size: 25px;
+        font-weight: bolder;
+}
+
+ #contenido {
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    margin: auto;
+    margin-top: 340px;
+ }
