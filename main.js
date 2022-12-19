@@ -40,7 +40,7 @@ function nuevaCarta() {
             reinicializar()
         }
     } else {
-        console.error("Se jodió la vaina")
+        console.error("Failed")
     }
 }
 //Reinicializar el juego
@@ -60,7 +60,7 @@ function reinicializar() {
     body.appendChild(botonMazos)
     botonMazos.textContent = "Otros mazos"
     botonMazos.setAttribute('id', 'boton')
-    botonMazos.addEventListener('click', relocation)
+    botonMazos.addEventListener('click', relocationDecks)
     //Boton para ir a la tienda
     body.appendChild(botonTiendas)
     botonTiendas.textContent = "Tienda"
@@ -72,8 +72,12 @@ function recargar() {
     location.reload()
 }
 //A otra pagina
-function relocation() {
+function relocationDecks() {
     location.assign("./decks.html")
+}
+
+function relocationStore() {
+    location.assign('./store.html')
 }
 
 function aleatorio(min, max) {
