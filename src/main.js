@@ -1,6 +1,12 @@
 const bodyId = document.body.setAttribute("id", "elbodi")
 const body = document.getElementById('elbodi')
-let boton = document.createElement('button')
+
+const sectionBtn = document.querySelector('.btns')
+const decks = document.querySelector('.btn-deck')
+const store = document.querySelector('.btn-store')
+const starGame = document.querySelector('.btn-starGame')
+
+
 let createDiv = document.createElement('div')
 let texto = document.createElement('p')
 
@@ -10,7 +16,8 @@ let mazo1 = ["Elegimos lo que somos o nos lo impone nuestro entorno", "¿Cuáles
 //Ejecución de juego
 function jugando() {
     //Removición
-    boton.style.display = "none"
+    sectionBtn.remove()
+
     //Agregación
     body.appendChild(createDiv)
     createDiv.appendChild(texto)
@@ -49,23 +56,30 @@ function reinicializar() {
     let botonReinicio = document.createElement('button')
     let botonMazos = document.createElement('button')
     let botonTiendas = document.createElement('button')
+    let divGrid = document.createElement('div')
+
     //Remover el listener
     createDiv.removeEventListener("click", nuevaCarta)
     //Boton para reiniciar
-    body.appendChild(botonReinicio)
-    botonReinicio.textContent = "Volver a jugar"
+    botonReinicio.textContent = "Inicio"
     botonReinicio.setAttribute('id', 'boton')
     botonReinicio.addEventListener('click', recargar)
     //Boton para escoger otro mazo
-    body.appendChild(botonMazos)
     botonMazos.textContent = "Otros mazos"
     botonMazos.setAttribute('id', 'boton')
     botonMazos.addEventListener('click', relocationDecks)
     //Boton para ir a la tienda
-    body.appendChild(botonTiendas)
     botonTiendas.textContent = "Tienda"
     botonTiendas.setAttribute('id', 'boton')
     botonTiendas.addEventListener('click', relocationStore)
+
+    // divContainer
+    body.appendChild(divGrid)
+    divGrid.appendChild(botonReinicio)
+    divGrid.appendChild(botonMazos)
+    divGrid.appendChild(botonTiendas)
+    //Grid styling
+    divGrid.setAttribute('id', 'grid-container')
 }
 //Recargar
 function recargar() {
@@ -75,7 +89,6 @@ function recargar() {
 function relocationDecks() {
     location.assign("./decks/decks.html")
 }
-
 function relocationStore() {
     location.assign('./store/store.html')
 }
@@ -84,6 +97,8 @@ function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-body.appendChild(boton)
-boton.textContent = "Iniciar juego"
-boton.addEventListener('click', jugando)
+
+
+starGame.addEventListener('click', jugando)
+decks.addEventListener('click', relocationDecks)
+store.addEventListener('click', relocationStore)
