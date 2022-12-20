@@ -65,7 +65,7 @@ function reinicializar() {
     body.appendChild(botonTiendas)
     botonTiendas.textContent = "Tienda"
     botonTiendas.setAttribute('id', 'boton')
-    botonTiendas.addEventListener('click', recargar)
+    botonTiendas.addEventListener('click', relocationStore)
 }
 //Recargar
 function recargar() {
@@ -73,11 +73,11 @@ function recargar() {
 }
 //A otra pagina
 function relocationDecks() {
-    location.assign("./decks.html")
+    location.assign("./decks/decks.html")
 }
 
 function relocationStore() {
-    location.assign('./store.html')
+    location.assign('./store/store.html')
 }
 
 function aleatorio(min, max) {
