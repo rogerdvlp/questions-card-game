@@ -1,3 +1,4 @@
+
 const bodyId = document.body.setAttribute("id", "elbodi")
 const body = document.getElementById('elbodi')
 

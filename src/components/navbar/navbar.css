@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.topnav {
+    margin: 4px;
+    padding: 4px;
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.279);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.logo {
+    margin-left: 150px;
+    width: 40%;
+}
+
+.nav-menu {
+    width: 10%;
+}

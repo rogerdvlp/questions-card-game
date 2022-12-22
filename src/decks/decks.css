@@ -15,7 +15,8 @@ h1 {
 .store-grid {
     display: grid;
     grid-template-columns:
-        repeat(auto-fit, minmax(100px, 1fr)) /* repeat(3, 1fr);
+        repeat(auto-fit, minmax(100px, 1fr))
+        /* repeat(3, 1fr);
     grid-template-rows: 1fr; */
 }
 
@@ -27,12 +28,12 @@ h1 {
 }
 
 .store-item:hover {
-    
-    background-color: aliceblue;
-    color: black;
+        background-color: rgb(6, 171, 88);
+    color: white;
     cursor: pointer;
-    
+    transition: 0.3s;
 }
+
 img {
     width: 100px;
     height: 100px;
@@ -41,17 +42,7 @@ img {
 }
 
 .item-name {
-    font-size: larger;
     margin: 0;
+    font-weight: 500;
 }
 
-.item-price {
-    font-size: x-large; 
-    margin: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-
-.italics {
-    font-style: italic;
-}
