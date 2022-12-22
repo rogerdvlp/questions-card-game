@@ -10,12 +10,14 @@ body {
 h1 {
     text-align: center;
     font-size: 40px;
+    margin: auto;
 }
 
 .store-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns:
+        repeat(auto-fit, minmax(100px, 1fr)) /* repeat(3, 1fr);
+    grid-template-rows: 1fr; */
 }
 
 .store-item {
@@ -24,10 +26,19 @@ h1 {
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.259);
 }
+
+.store-item:hover {
+    
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+    
+}
 img {
     width: 100px;
     height: 100px;
     margin-top: 10px;
+    border: 1px solid black;
 }
 
 .item-name {
