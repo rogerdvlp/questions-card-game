@@ -65,7 +65,7 @@ function reinicializar() {
     botonReinicio.setAttribute('id', 'boton')
     botonReinicio.addEventListener('click', recargar)
     //Boton para escoger otro mazo
-    botonMazos.textContent = "Otros mazos"
+    botonMazos.textContent = "Mazos"
     botonMazos.setAttribute('id', 'boton')
     botonMazos.addEventListener('click', relocationDecks)
     //Boton para ir a la tienda

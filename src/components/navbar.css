@@ -1,0 +1,22 @@
+.topnav {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+} */
+
+a{
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+a.focus{
+    text-decoration: none;
+}
