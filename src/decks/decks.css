@@ -3,6 +3,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 h1 {
@@ -28,7 +29,8 @@ h1 {
 }
 
 .store-item:hover {
-        background-color: rgb(6, 171, 88);
+       /*  background-color: rgb(6, 171, 88); */
+    background-color: rgb(33, 214, 123);
     color: white;
     cursor: pointer;
     transition: 0.3s;

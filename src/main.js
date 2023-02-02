@@ -9,67 +9,74 @@ const starGame = document.querySelector('.btn-starGame')
 
 
 let createDiv = document.createElement('div')
-let texto = document.createElement('p')
+let text = document.createElement('p')
 
 
 let mazo1 = ["Elegimos lo que somos o nos lo impone nuestro entorno", "¿Cuáles son tus propósitos por cumplir?", "¿Qué aprendiste de vos éste año?", "¿Qué aprendiste muy tarde en la vida?", "¿Cuál es tu cita más memorable?", "¿Cuál es tu mejor anécdota?", "¿Has cambiado de opinión sobre algo recientemente?", "¿Qué haría hacerte sentir más cerca de mí?", "¿Qué te está diciendo mi lenguaje corporal justo ahora?", "¿Cómo muestro que te amo sin decirtelo?", "¿Cuál fue tu primera impresión de mi?"];
 
-//Ejecución de juego
-function jugando() {
-    //Removición
+//Starting game
+function gameStart() {
+    //Remove button
     sectionBtn.remove()
-
-    //Agregación
+    //Appending
     body.appendChild(createDiv)
-    createDiv.appendChild(texto)
-    //Atributacion
+    createDiv.appendChild(text)
+    //Setting attributes
     createDiv.setAttribute('id', 'carta')
-    texto.setAttribute('id', 'contenido')
-    //Modificación - Aleatoreidad
+    text.setAttribute('id', 'content')
+    //Randomness
     let randomNumber = aleatorio(0, 10)
-    texto.textContent = mazo1[randomNumber]
+    text.textContent = mazo1[randomNumber]
     mazo1.splice(randomNumber, 1)
-    //Escuchación
-    createDiv.addEventListener('click', nuevaCarta)
+    //Card listener
+    createDiv.addEventListener('click', newCard)
 }
 
-function nuevaCarta() {
-    let contenido = document.getElementById('contenido')
+function newCard() {
+    let content = document.getElementById('content')
     let i = mazo1.length
 
     if (i >= 0) {
         i--
         let randomNumber = mazo1.splice(Math.floor(Math.random() * mazo1.length), 1);
         console.log(mazo1)
-        contenido.textContent = randomNumber
+        content.textContent = randomNumber
         if (i == -1) {
-            let mensajeFinal = "Se acabó el mazo."
-            contenido.textContent = mensajeFinal
-            reinicializar()
+            //Appending
+            body.appendChild(createDiv)
+            createDiv.appendChild(text)
+            //Setting attributes
+            createDiv.setAttribute('id', 'carta')
+            text.setAttribute('id', 'final')
+            let final = document.getElementById('final')
+            let finalMessage = "Se acabó el mazo."
+            final.textContent = finalMessage
+            final.addEventListener('click', reload)
+            reinitialize()
         }
     } else {
         console.error("Failed")
     }
 }
-//Reinicializar el juego
-function reinicializar() {
-    //Creación de variables
+//Reinitializing game
+function reinitialize() {
+    //Variables creation
     let botonReinicio = document.createElement('button')
     let botonMazos = document.createElement('button')
     let botonTiendas = document.createElement('button')
     let divGrid = document.createElement('div')
 
-    //Remover el listener
-    createDiv.removeEventListener("click", nuevaCarta)
-    //Boton para reiniciar
+    //Listener remover
+    createDiv.removeEventListener("click", newCard)
+    //Reset button
     botonReinicio.textContent = "Inicio"
     botonReinicio.setAttribute('id', 'boton')
-    botonReinicio.addEventListener('click', recargar)
-    //Boton para escoger otro mazo
+    botonReinicio.addEventListener('click', reload)
+    //Decks button
     botonMazos.textContent = "Mazos"
     botonMazos.setAttribute('id', 'boton')
     botonMazos.addEventListener('click', relocationDecks)
-    //Boton para ir a la tienda
+    //Store button
     botonTiendas.textContent = "Tienda"
     botonTiendas.setAttribute('id', 'boton')
     botonTiendas.addEventListener('click', relocationStore)
@@ -82,24 +89,23 @@ function reinicializar() {
     //Grid styling
     divGrid.setAttribute('id', 'grid-container')
 }
-//Recargar
-function recargar() {
+//Reloading
+function reload() {
     location.reload()
 }
-//A otra pagina
+//Going to another page
 function relocationDecks() {
     location.assign("./decks/decks.html")
 }
 function relocationStore() {
     location.assign('./store/store.html')
 }
-
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 
 
-starGame.addEventListener('click', jugando)
+starGame.addEventListener('click', gameStart)
 decks.addEventListener('click', relocationDecks)
 store.addEventListener('click', relocationStore)

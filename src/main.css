@@ -17,18 +17,19 @@ img {
     opacity: 100%;
 }
 button {
-    border: 100px;
+    border: none;
     font-size: 25px;
     font-weight: bolder;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 3px;
 }
 
 button:hover {
-    background-color: rgb(6, 171, 88);
-    color: white;
-    padding: 10px;
-    transition: 0.3s;
+  /*   background-color: rgb(6, 171, 88); */
+    background-color: rgb(33, 214, 123);
+    color: #f4f5f6f7;
+    transform: scale(1.1); 
+    transition: 0.1s;
 }
 
 #boton {
@@ -38,10 +39,17 @@ button:hover {
     }
 
  #contenido {
-    text-align: center;
-    display: grid;
     margin: auto;
     margin-top: 340px;
+    padding: 5px;
+    text-align: center;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+
+ #contenido:hover{
+    transition: 0.1s;
+    transform: scale(1.03);
  }
 
  #grid-container {
@@ -50,3 +58,18 @@ button:hover {
     display: grid;
     justify-content: center;
  }
+
+  #final {
+      margin: auto;
+      margin-top: 340px;
+      padding: 5px;
+      text-align: center;
+      width: 30%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 230, 42);
+  }
+
+  #final:hover {
+      transition: 0.1s;
+      transform: scale(1.03);
+  }

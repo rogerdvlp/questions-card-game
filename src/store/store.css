@@ -3,6 +3,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 h1 {
@@ -27,8 +28,8 @@ h1 {
 }
 
 .store-item:hover {
-    
-    background-color: aliceblue;
+    background-color: rgb(33, 214, 123);
+ /*    background-color: aliceblue; */
     color: black;
     cursor: pointer;
     
