@@ -16,6 +16,9 @@ let mazo1 = ["Elegimos lo que somos o nos lo impone nuestro entorno", "¿Cuáles
 
 //Starting game
 function gameStart() {
+    //Setting bg-color
+    body.style.backgroundImage = "linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)";
+    body.style.transition = '0.5s'
     //Remove button
     sectionBtn.remove()
     //Appending
@@ -34,6 +37,8 @@ function gameStart() {
 
 function newCard() {
     let content = document.getElementById('content')
+    let card = document.getElementById('carta')
+
     let i = mazo1.length
 
     if (i >= 0) {
@@ -41,6 +46,7 @@ function newCard() {
         let randomNumber = mazo1.splice(Math.floor(Math.random() * mazo1.length), 1);
         console.log(mazo1)
         content.textContent = randomNumber
+
         if (i == -1) {
             //Appending
             body.appendChild(createDiv)
@@ -48,9 +54,12 @@ function newCard() {
             //Setting attributes
             createDiv.setAttribute('id', 'carta')
             text.setAttribute('id', 'final')
+            //End page
             let final = document.getElementById('final')
             let finalMessage = "Se acabó el mazo."
             final.textContent = finalMessage
+            card.removeAttribute('id')
+            body.style.backgroundImage = "none";
             final.addEventListener('click', reload)
             reinitialize()
         }

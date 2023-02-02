@@ -1,9 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
 body {
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
     padding: auto;
     font-weight: 500;
+   /*  background: rgb(2, 0, 36);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+     */
 }
 .btns {
     display: grid;
@@ -38,18 +48,33 @@ button:hover {
         padding-right: 40px ;
     }
 
- #contenido {
-    margin: auto;
-    margin-top: 340px;
-    padding: 5px;
-    text-align: center;
-    width: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
- }
+#carta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+}
 
- #contenido:hover{
+ #content {
+    border-radius: 4px;
+   /*  padding-top: 160px; */
+   padding: 5px;
+   padding-top: 100px;
+    text-align: center;
+    justify-content: center;
+    
+    height: 50vh;
+    color: #f4f5f6f7;
+    text-shadow: 2px 2px 2px black;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */ 
+}
+
+ #content:hover{
     transition: 0.1s;
-    transform: scale(1.03);
+    transform: scale(1.01);
  }
 
  #grid-container {
@@ -64,7 +89,7 @@ button:hover {
       margin-top: 340px;
       padding: 5px;
       text-align: center;
-      width: 30%;
+      width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: rgb(255, 230, 42);
   }
