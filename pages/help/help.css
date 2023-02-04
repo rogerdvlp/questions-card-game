@@ -141,3 +141,7 @@ nav a {
     transition: 0.1s;
     transform: scale(1.05);
 }
+
+ .store-active {
+     background-color: rgba(0, 0, 0, 0.229);
+ }
