@@ -17,7 +17,7 @@ let randomNumber = aleatorio(0, 10)
 const mazo3 = {
     bgColor: 'linear-gradient(180deg, RGBA(65, 88, 208, 0%), RGBA(200, 80, 192, 50%), RGBA(255, 204, 112, 100%))',
     cartas: [
-        "¿Cuál es tu mayor fantasía sexual?", "¿Qué parte del cuerpo te vuelve más loco/a?", "¿Qué tengo que hacer para que te derritas de placer?", "¿Algún vicio oculto?", "¿Te gusta que te aten?", "¿Eres más dominante o dominado?", "¿Estarías dispuesto a hacer un trío?", "¿Qué opinas del intercambio de parejas?", "¿Con qué postura sexual gritas de placer?", "¿Tienes una tanga?"
+        "¿Cuál es tu mayor fantasía sexual?", "¿Qué parte del cuerpo te vuelve más loco/a?", "¿Qué tengo que hacer para que te derritas de placer?", "¿Algún vicio oculto?", "¿Te gusta que te aten?", "¿Eres más dominante o dominado?", "¿Estarías dispuesto a hacer un trío?", "¿Qué opinas del intercambio de parejas?", "¿Con qué postura sexual gritas de placer?", "¿Tienes puesta una tanga?"
     ]
 }
 const mazo2 = {
@@ -124,15 +124,15 @@ function reload() {
 }
 //Going to another page
 function relocationDecks() {
-    location.assign("./decks/decks.html")
+    location.assign('pages/decks/decks.html')
 }
 function relocationStore() {
-    location.assign('./store/store.html')
+    location.assign('pages/store/store.html')
 }
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
-export function navBar() {
+function navBar() {
     //Navbar vars
     const navBar = document.createElement('nav')
     const ul = document.createElement('ul')
@@ -146,18 +146,18 @@ export function navBar() {
     const links = [
         {
             text: "Backward",
-            icon: "public/icons/navbar/backward.svg",
+            icon: "/public/icons/navbar/backward.svg",
             url: "/main.html"
         },
         {
             text: "Mazos",
             icon: "/public/icons/navbar/mazos.svg",
-            url: "pages/decks/decks.html"
+            url: "/pages/decks/decks.html"
         },
         {
             text: "Tienda",
-            icon: "public/icons/navbar/tienda.svg",
-            url: "pages/store/store.html"
+            icon: "/public/icons/navbar/tienda.svg",
+            url: "/pages/store/store.html"
         }
     ]
     //NavBar
