@@ -130,8 +130,8 @@ button:hover {
     margin: 0 1rem;
 }
 
-.icon,
-.icon1,
+.icon:hover,
+.icon1:hover,
 .icon2:hover {
     transition: 0.1s;
     transform: scale(1.05);
