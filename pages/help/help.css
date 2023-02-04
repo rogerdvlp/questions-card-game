@@ -24,6 +24,12 @@ img {
     margin-left: 25%;
 }
 
+.content{
+    display: grid;
+    grid-row-gap: 30px;
+    justify-content: center;
+}
+
 ol{
     margin: 0;
     font-size: 1.2rem;
@@ -36,6 +42,7 @@ button {
     font-weight: bolder;
     padding: 5px;
     border-radius: 3px;
+    background-color: #ffe62a;
 }
 
 button:hover {
@@ -44,62 +51,6 @@ button:hover {
     color: #f4f5f6f7;
     transform: scale(1.1);
     transition: 0.1s;
-}
-
-#boton {
-    margin-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-#carta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-}
-
-#content {
-    border-radius: 4px;
-    /*  padding-top: 160px; */
-    padding: 5px;
-    padding-top: 130px;
-    text-align: center;
-    justify-content: center;
-    height: 50vh;
-    color: #f4f5f6f7;
-    text-shadow: 2px 2px 2px black;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
- background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
-}
-
-#content:hover {
-    transition: 0.1s;
-    transform: scale(1.01);
-}
-
-#grid-container {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    justify-content: center;
-}
-
-#final {
-    margin: auto;
-    margin-top: 340px;
-    padding: 5px;
-    text-align: center;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: rgb(255, 230, 42);
-}
-
-#final:hover {
-    transition: 0.1s;
-    transform: scale(1.03);
 }
 
 /* Navbar */
