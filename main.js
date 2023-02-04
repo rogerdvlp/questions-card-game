@@ -139,9 +139,11 @@ function navBar() {
     const anchor = document.createElement('a')
     const anchor1 = document.createElement('a')
     const anchor2 = document.createElement('a')
+    const anchor3 = document.createElement('a')
     const icon = document.createElement('img')
     const icon1 = document.createElement('img')
     const icon2 = document.createElement('img')
+    const icon3 = document.createElement('img')
 
     const links = [
         {
@@ -158,6 +160,11 @@ function navBar() {
             text: "Tienda",
             icon: "/public/icons/navbar/tienda.svg",
             url: "/pages/store/store.html"
+        },
+        {
+            text: "Instrucciones",
+            icon: "/public/icons/navbar/help.svg",
+            url: "/pages/help/help.html"
         }
     ]
     //NavBar
@@ -165,21 +172,26 @@ function navBar() {
     anchor.href = links[0].url
     anchor1.href = links[1].url
     anchor2.href = links[2].url
+    anchor3.href = links[3].url
     icon.src = links[0].icon
     icon1.src = links[1].icon
     icon2.src = links[2].icon
+    icon3.src = links[3].icon
 
     icon.setAttribute('class', 'icon')
     icon1.setAttribute('class', 'icon1')
     icon2.setAttribute('class', 'icon2')
+    icon3.setAttribute('class', 'icon3')
     body.appendChild(navBar)
     navBar.appendChild(ul)
     ul.appendChild(anchor)
     ul.appendChild(anchor1)
     ul.appendChild(anchor2)
+    ul.appendChild(anchor3)
     anchor.appendChild(icon)
     anchor1.appendChild(icon1)
     anchor2.appendChild(icon2)
+    anchor3.appendChild(icon3)
 }
 
 
