@@ -132,7 +132,7 @@ function relocationStore() {
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
-function navBar() {
+export function navBar() {
     //Navbar vars
     const navBar = document.createElement('nav')
     const ul = document.createElement('ul')
@@ -146,18 +146,18 @@ function navBar() {
     const links = [
         {
             text: "Backward",
-            icon: "/src/assets/icons/navbar/backward.svg",
-            url: "main.html"
+            icon: "public/icons/navbar/backward.svg",
+            url: "/main.html"
         },
         {
             text: "Mazos",
-            icon: "/src/assets/icons/navbar/mazos.svg",
-            url: "./decks/decks.html"
+            icon: "/public/icons/navbar/mazos.svg",
+            url: "pages/decks/decks.html"
         },
         {
             text: "Tienda",
-            icon: "/src/assets/icons/navbar/tienda.svg",
-            url: "./store/store.html"
+            icon: "public/icons/navbar/tienda.svg",
+            url: "pages/store/store.html"
         }
     ]
     //NavBar
