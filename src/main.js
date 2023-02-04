@@ -1,11 +1,13 @@
 const bodyId = document.body.setAttribute("id", "elbodi")
 const body = document.getElementById('elbodi')
 
+//Landing page
 const sectionBtn = document.querySelector('.btns')
 const btnDeck = document.querySelector('.btn-deck')
 const store = document.querySelector('.btn-store')
 const starGame = document.querySelector('.btn-starGame')
 
+//Carts
 let createDiv = document.createElement('div')
 let text = document.createElement('p')
 let randomDeck = aleatorio(0, 2)
@@ -45,6 +47,7 @@ function gameStart() {
     //Randomness
     text.textContent = decks[randomDeck].cartas[randomNumber]
     decks[randomDeck].cartas.splice(randomNumber, 1)
+    navBar(navBar)
     //Card listener
     createDiv.addEventListener('click', newCard)
 }
@@ -68,9 +71,12 @@ function newCard() {
             //Setting attributes
             createDiv.setAttribute('id', 'carta')
             text.setAttribute('id', 'final')
+            //Removing navbar
+            let barnav = document.getElementById('navbar')
+            barnav.remove()
             //End page
             let final = document.getElementById('final')
-            let finalMessage = "Se acabó el mazo."
+            let finalMessage = "Terminó el juego"
             final.textContent = finalMessage
             card.removeAttribute('id')
             body.style.backgroundImage = "none";
@@ -126,7 +132,42 @@ function relocationStore() {
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+function navBar() {
+    //Navbar vars
+    const navBar = document.createElement('nav')
+    const ul = document.createElement('ul')
+    const li = document.createElement('li')
+    const anchor = document.createElement('a')
+    const icon = document.createElement('img')
 
+    const links = [
+        {
+            text: "Backward",
+            icon: "/src/assets/icons/navbar/backward.svg",
+            url: "main.html"
+        },
+        {
+            text: "Mazos",
+            icon: "/src/assets/icons/navbar/mazos.svg",
+            url: "src/decks/decks.html"
+        },
+        {
+            text: "Tienda",
+            icon: "/src/assets/icons/navbar/tienda.svg",
+            url: "src/store/store.html"
+        }
+    ]
+    //NavBar
+    navBar.setAttribute('id', 'navbar')
+    anchor.href = links[0].url
+    icon.src = links[0].icon
+
+    icon.setAttribute('class', 'icon')
+    body.appendChild(navBar)
+    navBar.appendChild(ul)
+    ul.appendChild(anchor)
+    anchor.appendChild(icon)
+}
 
 
 starGame.addEventListener('click', gameStart)

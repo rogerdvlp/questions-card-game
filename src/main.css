@@ -97,3 +97,39 @@ button:hover {
       transition: 0.1s;
       transform: scale(1.03);
   }
+
+  /* Navbar */
+
+  nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: auto;
+      padding: 0;
+    background-color: #f4f5f6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.952);
+    height: 50px;
+  }
+
+  nav li {
+      display: inline-block;
+      margin-left: 1em;
+  }
+
+  nav a {
+      text-decoration: none;
+  }
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f4f5f600;
+    color: white;
+
+}
+
+.icon:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
