@@ -47,7 +47,7 @@ function gameStart() {
     //Randomness
     text.textContent = decks[randomDeck].cartas[randomNumber]
     decks[randomDeck].cartas.splice(randomNumber, 1)
-    navBar(navBar)
+    navBar()
     //Card listener
     createDiv.addEventListener('click', newCard)
 }
