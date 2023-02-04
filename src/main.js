@@ -152,17 +152,19 @@ function navBar() {
         {
             text: "Mazos",
             icon: "/src/assets/icons/navbar/mazos.svg",
-            url: "src/decks/decks.html"
+            url: "./decks/decks.html"
         },
         {
             text: "Tienda",
             icon: "/src/assets/icons/navbar/tienda.svg",
-            url: "src/store/store.html"
+            url: "./store/store.html"
         }
     ]
     //NavBar
     navBar.setAttribute('id', 'navbar')
     anchor.href = links[0].url
+    anchor1.href = links[1].url
+    anchor2.href = links[2].url
     icon.src = links[0].icon
     icon1.src = links[1].icon
     icon2.src = links[2].icon
