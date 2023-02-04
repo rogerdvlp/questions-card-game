@@ -5,6 +5,7 @@ const body = document.getElementById('elbodi')
 const sectionBtn = document.querySelector('.btns')
 const btnDeck = document.querySelector('.btn-deck')
 const store = document.querySelector('.btn-store')
+const help = document.querySelector(".btn-instrucciones")
 const starGame = document.querySelector('.btn-starGame')
 
 //Carts
@@ -129,6 +130,9 @@ function relocationDecks() {
 function relocationStore() {
     location.assign('pages/store/store.html')
 }
+function relocationHelp() {
+    location.assign('pages/help/help.html')
+}
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -198,3 +202,4 @@ function navBar() {
 starGame.addEventListener('click', gameStart)
 btnDeck.addEventListener('click', relocationDecks)
 store.addEventListener('click', relocationStore)
+help.addEventListener('click', relocationHelp)
