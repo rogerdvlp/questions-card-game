@@ -136,9 +136,12 @@ function navBar() {
     //Navbar vars
     const navBar = document.createElement('nav')
     const ul = document.createElement('ul')
-    const li = document.createElement('li')
     const anchor = document.createElement('a')
+    const anchor1 = document.createElement('a')
+    const anchor2 = document.createElement('a')
     const icon = document.createElement('img')
+    const icon1 = document.createElement('img')
+    const icon2 = document.createElement('img')
 
     const links = [
         {
@@ -161,12 +164,20 @@ function navBar() {
     navBar.setAttribute('id', 'navbar')
     anchor.href = links[0].url
     icon.src = links[0].icon
+    icon1.src = links[1].icon
+    icon2.src = links[2].icon
 
     icon.setAttribute('class', 'icon')
+    icon1.setAttribute('class', 'icon1')
+    icon2.setAttribute('class', 'icon2')
     body.appendChild(navBar)
     navBar.appendChild(ul)
     ul.appendChild(anchor)
+    ul.appendChild(anchor1)
+    ul.appendChild(anchor2)
     anchor.appendChild(icon)
+    anchor1.appendChild(icon1)
+    anchor2.appendChild(icon2)
 }
 
 
