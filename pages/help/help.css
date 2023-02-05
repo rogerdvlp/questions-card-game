@@ -19,9 +19,10 @@ body {
 
 
 img {
-    width: 200px;
+    width: 250px;
     height: 200px;
-    margin-left: 25%;
+    margin-left: 2.4em;
+    margin-bottom: -0.5em;
 }
 
 .content{
@@ -94,4 +95,22 @@ nav a {
 
  .store-active {
      background-color: rgba(0, 0, 0, 0.229);
+ }
+
+ @media screen and (min-height: 720px) and (min-width: 491px) {
+    img{
+        margin-top: 3em;
+        margin-bottom: 1em;
+        height: 100px;
+        width: 300px;
+        margin-left: 7em; 
+    }
+    .content{
+        text-align: justify;
+    }
+    .btn-starGame{
+        margin-left: 200px;
+        margin-right: 200px;
+        padding: 0.2em;
+    }
  }
