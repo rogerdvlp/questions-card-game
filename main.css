@@ -17,10 +17,15 @@ body {
 }
 .btns {
     display: grid;
-    grid-row-gap: 30px;
     justify-content: center;
     margin-top: 20vh;
 }
+
+.grid-buttons{
+    display: grid;
+    grid-row-gap: 30px;
+}
+
 img {
     width: 300px;
     height: 300px;
@@ -84,11 +89,9 @@ button:hover {
  }
 
   #final {
-      margin: auto;
       margin-top: 340px;
       padding: 5px;
       text-align: center;
-      width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: rgb(255, 230, 42);
   }
@@ -138,8 +141,39 @@ button:hover {
     transform: scale(1.05);
 }
 
-@media screen and (min-height: 720px ){
-    img {
+
+
+@media screen and (min-height: 720px) and (min-width: 991px){
+    img{
+        margin-left: 35px;
     margin-bottom: -100px
+    }
+    .grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 12px;
+            grid-column-gap: 12px;
+            height: 5em;
+            margin-top: 1em;
+        }
+    button {
+      box-shadow: 0 0 5px  rgba(0, 0, 0, 0.5);
+        }
+
+}
+
+@media screen and (min-width: 590px){
+    #final {
+        margin-left: 230px;
+        margin-right: 230px;
+        }
+}
+
+@media screen and (min-width: 991px) {
+    #final {
+        margin-left: 300px;
+        margin-right: 300px;
     }
 }
