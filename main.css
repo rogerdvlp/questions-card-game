@@ -138,7 +138,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-@media screen and (max-height: 700px ){
+@media screen and (min-height: 720px ){
     img {
     margin-bottom: -100px
     }
