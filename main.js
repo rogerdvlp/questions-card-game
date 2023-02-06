@@ -126,7 +126,7 @@ function newCard() {
     if (i >= 0) {
         i--
         let randomNumber = decks[randomDeck].cartas.splice(Math.floor(Math.random() * decks[randomDeck].cartas.length), 1);
-        console.log(decks[randomDeck].cartas)
+        /*  console.log(decks[randomDeck].cartas) */
         content.textContent = randomNumber
 
         if (i == -1) {
