@@ -15,7 +15,6 @@ let randomDeck = aleatorio(0, 4)
 let randomNumber = aleatorio(0, 10)
 
 //Data structuring
-
 const mazoAmor = {
     bgColor: 'linear-gradient(180deg, rgba(208,66,61,1) 0%, rgba(87,119,167,1) 50%, rgba(239,249,243,1) 100%)',
     cartas: [
@@ -261,7 +260,6 @@ function navBar() {
     anchor2.appendChild(icon2)
     anchor3.appendChild(icon3)
 }
-
 
 starGame.addEventListener('click', gameStart)
 btnDeck.addEventListener('click', relocationDecks)
